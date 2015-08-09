@@ -30,7 +30,7 @@ namespace App
 		{
 			var temp = _ring1;
 			_ring1 = _ring2;
-			_ring2 = _ring1;
+			_ring2 = temp;
 		}
 
 		public void Cheat()
