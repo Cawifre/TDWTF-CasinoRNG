@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace App
 {
-	internal class RandomRoulleteRing
+	internal class RandomRouletteRing
 	{
-		private static readonly IReadOnlyList<int> RoulleteOrder = new[] { 0, 28, 9, 26, 30, 11, 7, 20, 32, 17, 5, 22, 34, 15, 3, 24, 36, 13, 1, -1, 27, 10, 25, 29, 12, 8, 19, 31, 18, 6, 21, 33, 16, 4, 23, 35, 14, 2 };
+		private static readonly IReadOnlyList<int> RouletteOrder = new[] { 0, 28, 9, 26, 30, 11, 7, 20, 32, 17, 5, 22, 34, 15, 3, 24, 36, 13, 1, -1, 27, 10, 25, 29, 12, 8, 19, 31, 18, 6, 21, 33, 16, 4, 23, 35, 14, 2 };
 		private static readonly Random Random = new Random();
 
-		private IList<int> _pool = new List<int>( RoulleteOrder );
+		private IList<int> _pool = new List<int>( RouletteOrder );
 		private IList<int> _used = new List<int>();
 
 		public bool IsRandom { get; set; } = true;

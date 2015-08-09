@@ -9,8 +9,8 @@ namespace App
 {
 	internal class RandomishNumberGenerator
 	{
-		private RandomRoulleteRing _ring1 = new RandomRoulleteRing();
-		private RandomRoulleteRing _ring2 = new RandomRoulleteRing();
+		private RandomRouletteRing _ring1 = new RandomRouletteRing();
+		private RandomRouletteRing _ring2 = new RandomRouletteRing();
 
 		private readonly Action _cheat;
 
