@@ -14,6 +14,7 @@ namespace App
 	public partial class MainForm : Form
 	{
 		private RandomishNumberGenerator _rng = new RandomishNumberGenerator();
+		private StringBuilder _cheatCode = new StringBuilder();
 
 		public MainForm ()
 		{
@@ -22,6 +23,7 @@ namespace App
 
 		private void ultraToolbarsManager1_ToolClick ( object sender, Infragistics.Win.UltraWinToolbars.ToolClickEventArgs e )
 		{
+			var keys = ModifierKeys;
 			switch ( e.Tool.Key )
 			{
 				case "Exit":
@@ -30,22 +32,41 @@ namespace App
 				case "Spin":
 					Spin();
 					break;
-				case "Cheat":
-					Cheat();
-					break;
 			}
 		}
 
-		private void Spin()
+		private void Spin ()
 		{
 			var next = _rng.Next();
 			var text = next == -1 ? "00" : next.ToString();
 			labelNumber.Text = text;
 		}
 
-		private void Cheat()
+		private void Cheat ()
 		{
 			_rng.Cheat();
+		}
+
+		protected override void OnKeyPress ( KeyPressEventArgs e )
+		{
+			_cheatCode.Append( e.KeyChar );
+			CheckCheatCode();
+			base.OnKeyPress( e );
+		}
+
+		private void CheckCheatCode ()
+		{
+			const string magicWord = "rosebud";
+
+			if ( !magicWord.StartsWith( _cheatCode.ToString() ) )
+			{
+				_cheatCode.Clear();
+			}
+
+			if ( magicWord == _cheatCode.ToString() )
+			{
+				Cheat();
+			}
 		}
 	}
 }
