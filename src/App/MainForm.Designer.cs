@@ -33,8 +33,10 @@
 			Infragistics.Win.UltraWinToolbars.RibbonTab ribbonTab1 = new Infragistics.Win.UltraWinToolbars.RibbonTab("ribbonGambling");
 			Infragistics.Win.UltraWinToolbars.RibbonGroup ribbonGroup1 = new Infragistics.Win.UltraWinToolbars.RibbonGroup("ribbonGroupGambling");
 			Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool3 = new Infragistics.Win.UltraWinToolbars.ButtonTool("Spin");
+			Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool5 = new Infragistics.Win.UltraWinToolbars.ButtonTool("Cheat");
 			Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool2 = new Infragistics.Win.UltraWinToolbars.ButtonTool("Exit");
 			Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool4 = new Infragistics.Win.UltraWinToolbars.ButtonTool("Spin");
+			Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool6 = new Infragistics.Win.UltraWinToolbars.ButtonTool("Cheat");
 			Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
 			this.ultraToolbarsManager1 = new Infragistics.Win.UltraWinToolbars.UltraToolbarsManager(this.components);
 			this.MainForm_Fill_Panel = new Infragistics.Win.Misc.UltraPanel();
@@ -60,7 +62,8 @@
 			ribbonTab1.Caption = "Gambling";
 			ribbonGroup1.Caption = "Gambling";
 			ribbonGroup1.Tools.AddRange(new Infragistics.Win.UltraWinToolbars.ToolBase[] {
-            buttonTool3});
+            buttonTool3,
+            buttonTool5});
 			ribbonTab1.Groups.AddRange(new Infragistics.Win.UltraWinToolbars.RibbonGroup[] {
             ribbonGroup1});
 			this.ultraToolbarsManager1.Ribbon.NonInheritedRibbonTabs.AddRange(new Infragistics.Win.UltraWinToolbars.RibbonTab[] {
@@ -74,9 +77,12 @@
 			buttonTool4.SharedPropsInternal.Caption = "Spin";
 			buttonTool4.SharedPropsInternal.Category = "Gambling";
 			buttonTool4.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlG;
+			buttonTool6.SharedPropsInternal.Caption = "Cheat";
+			buttonTool6.SharedPropsInternal.Category = "Gambling";
 			this.ultraToolbarsManager1.Tools.AddRange(new Infragistics.Win.UltraWinToolbars.ToolBase[] {
             buttonTool2,
-            buttonTool4});
+            buttonTool4,
+            buttonTool6});
 			this.ultraToolbarsManager1.ToolClick += new Infragistics.Win.UltraWinToolbars.ToolClickEventHandler(this.ultraToolbarsManager1_ToolClick);
 			// 
 			// MainForm_Fill_Panel
@@ -87,9 +93,9 @@
 			this.MainForm_Fill_Panel.ClientArea.Controls.Add(this.labelNumber);
 			this.MainForm_Fill_Panel.Cursor = System.Windows.Forms.Cursors.Default;
 			this.MainForm_Fill_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.MainForm_Fill_Panel.Location = new System.Drawing.Point(1, 151);
+			this.MainForm_Fill_Panel.Location = new System.Drawing.Point(1, 176);
 			this.MainForm_Fill_Panel.Name = "MainForm_Fill_Panel";
-			this.MainForm_Fill_Panel.Size = new System.Drawing.Size(787, 384);
+			this.MainForm_Fill_Panel.Size = new System.Drawing.Size(787, 359);
 			this.MainForm_Fill_Panel.TabIndex = 0;
 			// 
 			// _MainForm_Toolbars_Dock_Area_Left
@@ -99,9 +105,9 @@
 			this._MainForm_Toolbars_Dock_Area_Left.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Left;
 			this._MainForm_Toolbars_Dock_Area_Left.ForeColor = System.Drawing.SystemColors.ControlText;
 			this._MainForm_Toolbars_Dock_Area_Left.InitialResizeAreaExtent = 1;
-			this._MainForm_Toolbars_Dock_Area_Left.Location = new System.Drawing.Point(0, 151);
+			this._MainForm_Toolbars_Dock_Area_Left.Location = new System.Drawing.Point(0, 176);
 			this._MainForm_Toolbars_Dock_Area_Left.Name = "_MainForm_Toolbars_Dock_Area_Left";
-			this._MainForm_Toolbars_Dock_Area_Left.Size = new System.Drawing.Size(1, 384);
+			this._MainForm_Toolbars_Dock_Area_Left.Size = new System.Drawing.Size(1, 359);
 			this._MainForm_Toolbars_Dock_Area_Left.ToolbarsManager = this.ultraToolbarsManager1;
 			// 
 			// _MainForm_Toolbars_Dock_Area_Right
@@ -111,9 +117,9 @@
 			this._MainForm_Toolbars_Dock_Area_Right.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Right;
 			this._MainForm_Toolbars_Dock_Area_Right.ForeColor = System.Drawing.SystemColors.ControlText;
 			this._MainForm_Toolbars_Dock_Area_Right.InitialResizeAreaExtent = 1;
-			this._MainForm_Toolbars_Dock_Area_Right.Location = new System.Drawing.Point(788, 151);
+			this._MainForm_Toolbars_Dock_Area_Right.Location = new System.Drawing.Point(788, 176);
 			this._MainForm_Toolbars_Dock_Area_Right.Name = "_MainForm_Toolbars_Dock_Area_Right";
-			this._MainForm_Toolbars_Dock_Area_Right.Size = new System.Drawing.Size(1, 384);
+			this._MainForm_Toolbars_Dock_Area_Right.Size = new System.Drawing.Size(1, 359);
 			this._MainForm_Toolbars_Dock_Area_Right.ToolbarsManager = this.ultraToolbarsManager1;
 			// 
 			// _MainForm_Toolbars_Dock_Area_Top
@@ -124,7 +130,7 @@
 			this._MainForm_Toolbars_Dock_Area_Top.ForeColor = System.Drawing.SystemColors.ControlText;
 			this._MainForm_Toolbars_Dock_Area_Top.Location = new System.Drawing.Point(0, 0);
 			this._MainForm_Toolbars_Dock_Area_Top.Name = "_MainForm_Toolbars_Dock_Area_Top";
-			this._MainForm_Toolbars_Dock_Area_Top.Size = new System.Drawing.Size(789, 151);
+			this._MainForm_Toolbars_Dock_Area_Top.Size = new System.Drawing.Size(789, 176);
 			this._MainForm_Toolbars_Dock_Area_Top.ToolbarsManager = this.ultraToolbarsManager1;
 			// 
 			// _MainForm_Toolbars_Dock_Area_Bottom
@@ -148,7 +154,7 @@
 			this.labelNumber.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelNumber.Location = new System.Drawing.Point(0, 0);
 			this.labelNumber.Name = "labelNumber";
-			this.labelNumber.Size = new System.Drawing.Size(787, 384);
+			this.labelNumber.Size = new System.Drawing.Size(787, 359);
 			this.labelNumber.TabIndex = 0;
 			this.labelNumber.Text = "Ready to spin!";
 			// 

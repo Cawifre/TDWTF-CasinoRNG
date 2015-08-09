@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Infragistics.Win;
 
 namespace App
 {
@@ -29,6 +30,9 @@ namespace App
 				case "Spin":
 					Spin();
 					break;
+				case "Cheat":
+					Cheat();
+					break;
 			}
 		}
 
@@ -37,6 +41,11 @@ namespace App
 			var next = _rng.Next();
 			var text = next == -1 ? "00" : next.ToString();
 			labelNumber.Text = text;
+		}
+
+		private void Cheat()
+		{
+			_rng.Cheat();
 		}
 	}
 }
